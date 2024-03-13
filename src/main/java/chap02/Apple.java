@@ -1,12 +1,21 @@
 package chap02;
 
 public class Apple {
-    private int weight = 0;
+    private Integer weight = 0;
     private Color color;
 
-    public Apple(int weight, Color color) {
+    public Apple(Integer weight, Color color) {
         this.weight = weight;
         this.color = color;
+    }
+
+    public Apple(Integer weight) {
+        this.weight = weight;
+    }
+
+    public Apple() {
+        this.weight = 100;
+        this.color = Color.GREEN;
     }
 
     public int getWeight() {
@@ -30,11 +39,6 @@ public class Apple {
     public String toString() {
         return String.format("Apple{color=%s, weight=%d}", color, weight);
     }
-}
-
-enum Color {
-    RED,
-    GREEN
 }
 
 // 전략 디자인 패턴: 전략 알고리즘(기능을 수행할 인터페이스를 상속받은 클래스)을
