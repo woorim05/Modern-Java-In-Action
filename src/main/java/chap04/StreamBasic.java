@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import static chap04.Dish.menu;
 
-public class Stream {
+public class StreamBasic {
     public static void main(String[] args) {
         /**
          * 스트림
