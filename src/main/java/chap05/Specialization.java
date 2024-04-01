@@ -22,7 +22,7 @@ public class Specialization {
          * - boxed(): 숫자 스트림을 스트림으로 변환
          * 숫자 범위
          * - range(start, end): start + 1 ~ end - 1
-         * - rangeClose(start, end): start ~ end
+         * - rangeClosed(start, end): start ~ end
          */
 
         // IntStream 으로 반환 후 sum 메서드 사용
