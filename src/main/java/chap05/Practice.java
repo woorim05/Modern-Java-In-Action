@@ -10,20 +10,20 @@ import java.util.stream.Collectors;
 import static java.util.Comparator.comparing;
 
 public class Practice {
-    public static void main(String[] args) {
-        Trader raoul = new Trader("Raoul", "Cambridge");
-        Trader mario = new Trader("Mario", "Milan");
-        Trader alan = new Trader("Alan", "Cambridge");
-        Trader brian = new Trader("Brian", "Cambridge");
+    static Trader raoul = new Trader("Raoul", "Cambridge");
+    static Trader mario = new Trader("Mario", "Milan");
+    static Trader alan = new Trader("Alan", "Cambridge");
+    static Trader brian = new Trader("Brian", "Cambridge");
 
-        List<Transaction> transactions = Arrays.asList(
-                new Transaction(brian, 2011, 300),
-                new Transaction(raoul, 2012, 1000),
-                new Transaction(raoul, 2011, 400),
-                new Transaction(mario, 2012, 710),
-                new Transaction(mario, 2012, 700),
-                new Transaction(alan, 2012, 950)
-        );
+    public static List<Transaction> transactions = Arrays.asList(
+            new Transaction(brian, 2011, 300, "A12"),
+            new Transaction(raoul, 2012, 1000, "a13"),
+            new Transaction(mario, 2012, 700, "1ca"),
+            new Transaction(raoul, 2011, 400, "C13"),
+            new Transaction(mario, 2012, 710, "b14"),
+            new Transaction(alan, 2012, 950, "2dd")
+    );
+    public static void main(String[] args) {
 
         // 1. 2011년에 일어난 모든 트랜잭션을 찾아 값을 오름차순으로 정리하시오.
         List<Transaction> transactions2011 = transactions.stream()
