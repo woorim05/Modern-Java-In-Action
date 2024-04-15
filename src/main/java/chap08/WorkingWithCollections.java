@@ -80,6 +80,7 @@ public class WorkingWithCollections {
         Map<String, List<String>> friendsToMovies = new HashMap<>();
         // key로 조회한 value가 없으면 추가
         System.out.println("# 기존 코드");
+
         String friend = "Raphael";
         List<String> movies = friendsToMovies.get(friend);
         if (movies == null) {
@@ -165,6 +166,8 @@ public class WorkingWithCollections {
             return new Transaction(t);
         });
         System.out.println("replaceAll :: " + transactions);
+
+        transactions.sort(Comparator.comparing(Transaction::getReferenceCode));
     }
 
 }
