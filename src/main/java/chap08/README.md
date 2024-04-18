@@ -34,7 +34,7 @@
     - merge(k, v, BiFunction): 키에 해당하는 값이 없거나 널이면 v값을,  
                                값이 있으면 기존 값에 연산(BiFunction) 했을 때
                                값이 null이 아니면 put, null이면 remove
-    ```
+    ```java
       default V merge(K key, V value,
             BiFunction<? super V, ? super V, ? extends V> remappingFunction) {
         Objects.requireNonNull(remappingFunction);

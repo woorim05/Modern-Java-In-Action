@@ -37,7 +37,7 @@
 > ### collect & reduce  
 >  collect 메서드는 도출하려는 결과를 누적하는 컨테이너를 바꾸도록 설계된 메서드  
 >  reduce는 두 값을 하나로 도출하는 불변형 연산
-> ```
+> ```java
 > Stream<Integer> stream = Arrays.asList(1, 2, 3, 4, 5, 6).stream();
 > List<Integer> numbers = stream.reduce(
 >                                 new ArrayList<Integer>(),
@@ -74,7 +74,7 @@
 ---
 
 ## <Collector 인터페이스의 메서드 살펴보기>
-```
+```java
 public interface Collector<T, A, R> {  
   Supplier<A> supplier();  
   BiConsumer<A, T> accumulator();

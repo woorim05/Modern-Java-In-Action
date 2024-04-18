@@ -30,7 +30,7 @@
 ---
 ## Spliterator 인터페이스
 - 분할할 수 있는 반복자
-```
+```java
 public interface Spliterator<T> {
   boolean tryAdvance(Consumer<? super T> action);
   Spliterator<T> trySplit();
