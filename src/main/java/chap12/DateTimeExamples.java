@@ -1,6 +1,7 @@
 package chap12;
 
 import java.time.*;
+import java.time.chrono.JapaneseDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
@@ -17,6 +18,8 @@ public class DateTimeExamples {
         int len = date.lengthOfMonth();             // 30 (월의 일수)
         boolean leap = date.isLeapYear();           // true(윤년여부)
 
+        JapaneseDate japaneseDate = JapaneseDate.from(today);
+        System.out.println(japaneseDate);
         // 시간
         LocalTime time = LocalTime.of(13, 45, 20);  // 13:45:20
         int hour = time.getHour();                  // 13
@@ -46,7 +49,7 @@ public class DateTimeExamples {
         // 아래 Instant는 모두 같음
         Instant.ofEpochSecond(3);
         Instant.ofEpochSecond(3, 0);
-        Instant.ofEpochSecond(2, 1000000000);  // 10억초 = 1초
+        Instant.ofEpochSecond(2, 1000000000);  // 10억 = 1초
         Instant.ofEpochSecond(4, -1000000000);
 
         // format & parse
